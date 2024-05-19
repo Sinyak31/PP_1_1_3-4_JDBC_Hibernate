@@ -15,16 +15,11 @@ public class Util {
     public static Connection getConnection() {
         Connection connection;
         try {
-            Class.forName(DB_DRIVER);
             connection = DriverManager.getConnection(DB_URL, DB_NAME, DB_PASSWORD);
         } catch (SQLException e) {
             System.out.println("no such db");
             throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            System.out.println("no JDBC driver");
-            throw new RuntimeException(e);
         }
         return connection;
     }
-
 }
