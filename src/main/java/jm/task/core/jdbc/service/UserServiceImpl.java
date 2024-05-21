@@ -22,19 +22,19 @@ public class UserServiceImpl implements UserService {
 
 
     public void createUsersTable() {
-//        dao.createUsersTable();
-        daoHibernate.createUsersTable();
+        dao.createUsersTable();
+//        daoHibernate.createUsersTable();
     }
 
     public void dropUsersTable() {
-//        dao.dropUsersTable();
-        daoHibernate.dropUsersTable();
+        dao.dropUsersTable();
+//        daoHibernate.dropUsersTable();
 
     }
 
     public void saveUser(String name, String lastName, byte age) {
-//        dao.saveUser(name, lastName, age);
-        daoHibernate.saveUser(name, lastName, age);
+        dao.saveUser(name, lastName, age);
+//        daoHibernate.saveUser(name, lastName, age);
         System.out.println("User с именем - " + name + " добавлен в БД");
     }
 
